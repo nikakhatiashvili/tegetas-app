@@ -5,8 +5,7 @@ import androidx.lifecycle.viewModelScope
 import com.example.myapplication.data.Result
 import com.example.myapplication.domain.MovieRepository
 import com.example.myapplication.domain.SearchRepository
-import com.example.myapplication.domain.model.Movies
-import dagger.hilt.android.AndroidEntryPoint
+import com.example.myapplication.domain.model.Movie
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job
@@ -24,9 +23,9 @@ class HomeViewModel @Inject constructor(
 
     private val delay = 400L
 
-    private val _movies: MutableStateFlow<List<Movies>> = MutableStateFlow(emptyList())
+    private val _movies: MutableStateFlow<List<Movie>> = MutableStateFlow(emptyList())
     val movies = _movies.asStateFlow()
-    private val originalMovies = mutableListOf<Movies>()
+    private val originalMovies = mutableListOf<Movie>()
 
 
     private var searchJob: Job? = null

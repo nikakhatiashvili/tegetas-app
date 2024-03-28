@@ -6,7 +6,7 @@ import com.example.myapplication.data.Result
 import com.example.myapplication.domain.DetailRepository
 import com.example.myapplication.domain.MovieRepository
 import com.example.myapplication.domain.model.MovieDetail
-import com.example.myapplication.domain.model.Movies
+import com.example.myapplication.domain.model.Movie
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.MutableStateFlow

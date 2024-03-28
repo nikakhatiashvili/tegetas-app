@@ -5,9 +5,9 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.ListAdapter
 import com.example.myapplication.databinding.MovieItemBinding
-import com.example.myapplication.domain.model.Movies
+import com.example.myapplication.domain.model.Movie
 
-class MovieAdapter(private val clickListener: (id:Int) -> Unit) : ListAdapter<Movies, RecyclerView.ViewHolder>(DiffCallback()) {
+class MovieAdapter(private val clickListener: (id:Int) -> Unit) : ListAdapter<Movie, RecyclerView.ViewHolder>(DiffCallback()) {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
         val binding = MovieItemBinding.inflate(LayoutInflater.from(parent.context), parent, false)

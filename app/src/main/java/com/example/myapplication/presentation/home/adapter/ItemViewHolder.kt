@@ -6,7 +6,7 @@ import com.bumptech.glide.Glide
 import com.example.myapplication.R
 import com.example.myapplication.common.Constants
 import com.example.myapplication.databinding.MovieItemBinding
-import com.example.myapplication.domain.model.Movies
+import com.example.myapplication.domain.model.Movie
 
 
 class ItemViewHolder(
@@ -15,7 +15,7 @@ class ItemViewHolder(
 ) :
     RecyclerView.ViewHolder(binding.root) {
 
-    fun bind(movie: Movies) {
+    fun bind(movie: Movie) {
         binding.originalName.text = movie.original_title.toString()
         Glide.with(binding.root.context).load(Constants.IMAGE_PATH.plus(movie.poster_path))
             .into(binding.poster)
